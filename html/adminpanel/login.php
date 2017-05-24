@@ -1,84 +1,82 @@
-<?php
+<?php 
 	session_start();
-	// define(name, true)
-	include("phpfiles/db_connect.php");
+	
+	include ('../db.php');
 
-	if ($_POST["submit_enter"])
+	if (isset($_POST['submit']))
+	{
+		$login = trim($_POST['login']);
+		$password = md5($_POST['password']);
+
+		if ($login && $password)
 		{
-			$login = $_POST["input_login"];
-			$pass = $_POST["input_pass"];
 
-	if ($login && $pass)
+			$result = mysqli_query($link, "SELECT * FROM users WHERE login = '$login' AND password = '$password'");
+
+			if (mysqli_num_rows($result) > 0) 
+			{
+
+				$row = mysqli_fetch_array($result);
+				$_SESSION['auth_admin'] = "yes_auth";
+				$_SESSION['login'] = $row["login"];
+				$_SESSION['id'] = $row["id"];
+				header ("location: index.php");
+			} else
+			{
+				$msgerror = "Неверный логин или пароль";
+			}
+		} else
 		{
-		// $pass = md5 ($pass);
-		// $pass = strrev($pass);
-		// $pass = strtolower("mb.04fjil!43".$pass."qj23,jjdp9");
-
-		$result = mysqli_query($link, "SELECT * FROM reg_admin WHERE login = '$login' AND pass = '$pass'");
-
-	if (mysqli_num_rows($result) > 0)
-	{
-		$row = mysqli_fetch_array($result);
-		$_SESSION['auth_admin'] = 'yes_auth';
-		header("Location: index.php");
-	}else
-	{
-		$msgerror = "Неверный Логин и (или) Пароль.";
+			$msgerror = "Заполните поля";
+		}
+	
 	}
-	}else
-	{
-		$msgerror = "Заполните все поля!";
-	}
-
-	}
-?>
-<!doctype html>
-<html lang="en-us">
+ ?>
+<!DOCTYPE html>
+<html>
 <head>
+	<title>Login | adminpanel</title>
 	<meta charset="utf-8">
-	
-	<title>3D-Gallery | Login</title>
-	
-	<meta name="description" content="">
-	<meta name="author" content="revaxarts.com">
-	
-	<!-- Google Font and style definitions -->
-	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:regular,bold">
-	<link rel="stylesheet" href="css/style.css">
-	
-	<!-- include the skins (change to dark if you like) -->
-	<link rel="stylesheet" href="css/light/theme.css" id="themestyle">
+	<link rel="stylesheet" href="css/uikit.css">
+	 <link rel="stylesheet" type="text/css" href="css/login.css">
+	<link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.ico">
 </head>
-<body id="login">
-	
-		<header>
-			<div id="logo">
-				<a href="login.php">3D-Gallery</a>
-			</div>
-		</header>
-		<section id="content">
-			<?php
-				if ($msgerror)
-				{
-					echo '<p id="msgerror">'.$msgerror.'</p>';
-				}
+<body>
+	<div class="uk-vertical-align uk-text-center uk-height-1-1">
+		 <div class="uk-vertical-align-middle" style="width: 350px;">
 
-			?>
-		<form method="post" id="loginform">
-			<fieldset>
-				<section><label for="username">Логин</label>
-					<div><input type="text" id="username" name="input_login" autofocus></div>
-				</section>
-				<section><label for="password">Пароль</label>
-					<div><input type="password" id="password" name="input_pass"></div>
-				</section>
-				<section>
-					<div><input align="right" id="submiting"  type="submit" name="submit_enter" value="Войти"/></div>
-				</section>
-			</fieldset>
-		</form>
-		</section>
-		<footer>Copyright by Nikson1997</footer>
-		
+		 	<img class="uk-margin-bottom" width="140" height="120" src="css/images/logo.png" alt="">
+
+<?php
+if (isset($msgerror)) echo '<p id="form-error" align="center">'.$msgerror.'</p>';
+
+	if(isset($_SESSION['message']))
+		{
+		echo $_SESSION['message'];
+		unset($_SESSION['message']);
+		}
+        
+    if(isset($_SESSION['answer']))
+		{
+		echo $_SESSION['answer'];
+		unset($_SESSION['answer']);
+		} 
+?>
+			<form name="form_login" method="post">
+
+				<li>
+				<input type="text" name="login" placeholder="Логин"/>
+				</li>
+  
+				<li>
+				  <input type="text" name="password" placeholder="Пароль"/>
+				</li>
+
+
+			    <p align="center" ><input type="submit" id="submit_form" name="submit" value="Вход"/></p> 
+			</form>
+
+		</div>
+	</div>
 </body>
 </html>

@@ -133,21 +133,25 @@
 	?>
 	<section id="content">
 		<div class="g12 nodrop">
-			<h1>Загрузка модели</h1>
+			<h1>Добавление сотрудника</h1>
 			<div id="dobavlenie">
 				<form enctype="multipart/form-data" method="post" action='add_model.php';>
 					<ul id="edit_model">
 						<li>
-							<label>Название модели</label>
+							<label>Фамилия </label>
 							<input type="text" name="form_modelname" />
 						</li>
 						<li>
-							<label>Краткое описание</label>
+							<label>Имя</label>
 							<input type="text" name="form_minidesc" />
 						</li>
 						<li>
-							<label>Полное описание</label>
-							<textarea type="text" name="form_description"></textarea>
+							<label>Адрес проживания</label>
+							<input type="text" name="form_minidesc" />
+						</li>
+						<li>
+							<label>Номер телефона</label>
+							<input type="text" name="form_minidesc" />
 						</li>
 						<li>
 							<label>Путь модели</label>
@@ -168,7 +172,6 @@
 			
 		</div>	
 	</section>
-	<footer>Copyright by Nikson1997</footer>
 </body>
 </html>
 <?php

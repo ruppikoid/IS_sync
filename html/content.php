@@ -55,7 +55,7 @@
 				$('#elfinder').elfinder({
 					url : 'elfinder/php/connector.minimal.php'  // connector URL (REQUIRED)
 					, lang: 'ru'                    // language (OPTIONAL)
-					, height: '550'
+					, height: '650'
 				});
 			});
 		</script>

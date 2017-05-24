@@ -2,7 +2,7 @@
 	$db_host = 'localhost';
 	$db_user = 'root';
 	$db_pass = 'root';
-	$db_database = 'hosting';
+	$db_database = 'test1';
 
 	$link = mysqli_connect($db_host, $db_user, $db_pass);
 

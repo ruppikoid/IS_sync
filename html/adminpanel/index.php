@@ -166,7 +166,6 @@ if (isset($action))
 			</ul>
 		</div>	
 	</section>
-	<footer>Copyright by Nikson1997</footer>
 </body>
 </html>
 <?php
