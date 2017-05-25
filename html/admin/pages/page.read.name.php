@@ -7,13 +7,12 @@
 <?php foreach ($news as $item) : ?>
 
     <div class="uk-card uk-card-default uk-card-body uk-margin">
-        <h3 class="uk-card-title">#<?= $item['id'] ?> - <?= $item['firstname'] ?></h3>
-        <em class="uk-float-right uk-text-meta"> <?= $item['lastname'] ?></em>
-        <p class="uk-text-meta"><?= $item['phone_number'] ?></p>
+        <h3 class="uk-card-title">ID <?= $item['id'] ?> - <?= $item['firstname'] ?> <?= $item['lastname'] ?></h3>
+        <p class="uk-text-meta uk-text-right">Номер телефона: <?= $item['phone_number'] ?></p>
 
         <hr class="uk-divider-icon">
 
-        <p><?= $item['city'] ?></p>
+        <p>Место жительства: <?= $item['city'] ?></p>
 
         <div class="uk-margin uk-text-right">
             <a href="edit.name.php?id=<?= $item['id'] ?>" class="uk-button uk-button-small uk-button-primary">Редактировать</a>

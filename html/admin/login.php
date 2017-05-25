@@ -11,7 +11,7 @@
 		if ($login && $password)
 		{
 
-			$result = mysqli_query($link, "SELECT * FROM users WHERE login = '$login' AND password = '$password'");
+			$result = mysqli_query($link, "SELECT * FROM admin WHERE login = '$login' AND password = '$password'");
 
 			if (mysqli_num_rows($result) > 0) 
 			{
@@ -20,7 +20,7 @@
 				$_SESSION['auth_admin'] = "yes_auth";
 				$_SESSION['login'] = $row["login"];
 				$_SESSION['id'] = $row["id"];
-				header ("location: content.php");
+				header ("location: index.php");
 			} else
 			{
 				$msgerror = "Неверный логин или пароль";
@@ -38,7 +38,7 @@
 	<title>Вход</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="assets/css/uikit.css">
-	 <link rel="stylesheet" type="text/css" href="assets/css/login.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/login.css">
 	<link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.ico">
 </head>
 <body>
@@ -75,8 +75,6 @@ if (isset($msgerror)) echo '<p id="form-error" align="center">'.$msgerror.'</p>'
 
 			    <p align="center" ><input type="submit" id="submit_form" name="submit" value="Вход"/></p> 
 			    <p align="center" ><a href="index.php">Главная страница</a>    
-			        <a href="reg.php">Не зарегистрированы?</a></p>
-
 			</form>
 
 		</div>

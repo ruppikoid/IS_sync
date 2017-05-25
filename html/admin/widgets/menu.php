@@ -6,7 +6,8 @@
             <li><a href="index.php">Главная</a></li>
             <li><a href="read.php">Просмотр записей</a></li>
             <li><a href="edit.php">Добавить запись</a></li>
-            <li> <a href="#" class="uk-button uk-button-small uk-button-danger">Выход</a></li>
+            <li> <a href="?logout" class="uk-button uk-button-small uk-button-danger">Выход</a></li>
+            <p style="color: white; margin-left: 20px; ">Привет, <?php echo $_SESSION["login"];?>!</p>
 
         </ul>
 

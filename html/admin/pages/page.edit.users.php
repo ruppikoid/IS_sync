@@ -27,12 +27,12 @@
             </div>
 
             <div class="uk-margin">
-                <input type="text" class="uk-input" placeholder="email" 
+                <input type="text" class="uk-input" placeholder="Email" 
                 name="email" value="<?= $item['email'] ?>">
             </div>
 
             <div class="uk-margin">
-                <input type="text" class="uk-input" placeholder="Имя папки" 
+                <input type="text" class="uk-input" placeholder="Id из сотрудников" 
                 name="name_id" value="<?= $item['name_id'] ?>">
             </div>
 
@@ -61,7 +61,7 @@
             </div>
 
             <div class="uk-margin">
-                <input type="text" class="uk-input" placeholder="email" name="email">
+                <input type="text" class="uk-input" placeholder="Email" name="email">
             </div>
 
 

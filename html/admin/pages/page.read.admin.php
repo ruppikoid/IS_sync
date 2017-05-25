@@ -7,12 +7,12 @@
 <?php foreach ($news as $item) : ?>
 
     <div class="uk-card uk-card-default uk-card-body uk-margin">
-        <h3 class="uk-card-title">#<?= $item['id'] ?> - <?= $item['login'] ?></h3>
-        <em class="uk-float-right uk-text-meta"> <?= $item['password'] ?></em>
+        <h3 class="uk-card-title">ID <?= $item['id'] ?> - <?= $item['login'] ?></h3>
+        <p class="uk-text-right uk-text-meta"> Пароль: <?= $item['password'] ?></p>
        
         <hr class="uk-divider-icon">
         
-        <p><?= $item['directory'] ?></p>
+        <p>Папка пользователя: <?= $item['directory'] ?></p>
 
         <div class="uk-margin uk-text-right">
             <a href="edit.admin.php?id=<?= $item['id'] ?>" class="uk-button uk-button-small uk-button-primary">Редактировать</a>
