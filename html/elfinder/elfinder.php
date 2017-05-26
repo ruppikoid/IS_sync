@@ -7,7 +7,7 @@
 
 		<!-- Section CSS -->
 		<!-- jQuery UI (REQUIRED) -->
-		<link rel="stylesheet" type="text/css" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+		<link rel="stylesheet" type="text/css" href="../assets/scripts/jquery-ui.css">
 
 		<!-- elFinder CSS (REQUIRED) -->
 		<link rel="stylesheet" type="text/css" href="css/elfinder.min.css">
@@ -19,9 +19,9 @@
 		<script src="//code.jquery.com/jquery-1.12.4.min.js"></script>
 		<![endif]-->
 		<!--[if gte IE 9]><!-->
-		<script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
+		<script src="../assets/scripts/jquery-3.1.1.min.js"></script>
 		<!--<![endif]-->
-		<script src="//code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+		<script src="../assets/scripts/jquery-ui.min.js"></script>
 
 		<!-- elFinder JS (REQUIRED) -->
 		<script src="js/elfinder.min.js"></script>

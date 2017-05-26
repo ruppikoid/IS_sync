@@ -1,6 +1,6 @@
-<?php 
+<?php
 	session_start();
-	
+
 	include ('../db.php');
 
 	if (isset($_POST['submit']))
@@ -13,7 +13,7 @@
 
 			$result = mysqli_query($link, "SELECT * FROM admin WHERE login = '$login' AND password = '$password'");
 
-			if (mysqli_num_rows($result) > 0) 
+			if (mysqli_num_rows($result) > 0)
 			{
 
 				$row = mysqli_fetch_array($result);
@@ -29,7 +29,7 @@
 		{
 			$msgerror = "Заполните поля";
 		}
-	
+
 	}
  ?>
 <!DOCTYPE html>
@@ -55,26 +55,26 @@ if (isset($msgerror)) echo '<p id="form-error" align="center">'.$msgerror.'</p>'
 		echo $_SESSION['message'];
 		unset($_SESSION['message']);
 		}
-        
+
     if(isset($_SESSION['answer']))
 		{
 		echo $_SESSION['answer'];
 		unset($_SESSION['answer']);
-		} 
+		}
 ?>
 			<form name="form_login" method="post">
 
 				<li>
 				<input type="text" name="login" placeholder="Логин"/>
 				</li>
-  
+
 				<li>
 				  <input type="text" name="password" placeholder="Пароль"/>
 				</li>
 
 
-			    <p align="center" ><input type="submit" id="submit_form" name="submit" value="Вход"/></p> 
-			    <p align="center" ><a href="index.php">Главная страница</a>    
+			    <p align="center" ><input type="submit" id="submit_form" name="submit" value="Вход"/></p>
+			    <p align="center" ><a href="index.php">Главная страница</a>
 			</form>
 
 		</div>
