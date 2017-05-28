@@ -43,7 +43,7 @@
         ];
 
         $database->query("
-            INSERT INTO name (firstname, lastname, phone_number, city) 
+            INSERT INTO name (firstname, lastname, phonenumber, city) 
             VALUES ('{$item['firstname']}', '{$item['lastname']}', '{$item['phonenumber']}', '{$item['city']}')
         ");
 
