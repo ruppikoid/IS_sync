@@ -22,7 +22,7 @@
             
             firstname       ='{$_POST['firstname']}', 
             lastname        ='{$_POST['lastname']}', 
-            phone_number    ='{$_POST['phone_number']}', 
+            phonenumber    ='{$_POST['phonenumber']}', 
             city            ='{$_POST['city']}'
 
             WHERE id={$id}
@@ -37,14 +37,14 @@
         $item = [
             'firstname'        => $_POST['firstname'],
             'lastname'         => $_POST['lastname'],
-            'phone_number'     => $_POST['phone_number'],
+            'phonenumber'     => $_POST['phonenumber'],
             'city'             => $_POST['city']
                      
         ];
 
         $database->query("
             INSERT INTO name (firstname, lastname, phone_number, city) 
-            VALUES ('{$item['firstname']}', '{$item['lastname']}', '{$item['phone_number']}', '{$item['city']}')
+            VALUES ('{$item['firstname']}', '{$item['lastname']}', '{$item['phonenumber']}', '{$item['city']}')
         ");
 
         header('Location: edit.php?id='.$database->lastInsertID());

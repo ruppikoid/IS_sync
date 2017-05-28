@@ -6,7 +6,7 @@
 	if (isset($_POST['submit']))
 	{
 		$login = trim($_POST['login']);
-		$password = md5($_POST['password']);
+		$password = ($_POST['password']);
 
 		if ($login && $password)
 		{
@@ -32,6 +32,7 @@
 
 	}
  ?> 
+ 
 <!DOCTYPE html>
 <html>
 <head>

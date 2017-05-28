@@ -36,6 +36,14 @@
                 name="name_id" value="<?= $item['name_id'] ?>">
             </div>
 
+          <!--   <div class="uk-margin">
+                <select class="uk-select" name="name_id" placeholder="Раздел">
+                <?php foreach ($sections as $x) : ?>
+                    <option value="<?= $x['id'] ?>"><?= $x['name'] ?></option>
+                <?php endforeach ?>
+                </select>
+            </div> -->
+
             <div class="uk-margin uk-text-center">
                 <button class="uk-button uk-button-secondary" type="submit" name="update">Обновить</button>
             </div>
@@ -68,6 +76,14 @@
               <div class="uk-margin">
                 <input type="text" class="uk-input" placeholder="name_id" name="name_id">
             </div>
+
+       <!--       <div class="uk-margin">
+                <select class="uk-select" name="name_id" placeholder="Фамилия сотрудника">
+                <?php foreach ($sections as $x) : ?>
+                    <option value="<?= $x['id'] ?>"><?= $x['lastname'] ?></option>
+                <?php endforeach ?>
+                </select>
+            </div>  -->
 
             <div class="uk-margin uk-text-center">
                 <button class="uk-button uk-button-secondary" type="submit" name="create">Добавить</button>

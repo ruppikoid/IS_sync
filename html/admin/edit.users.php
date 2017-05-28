@@ -49,6 +49,11 @@
             VALUES ('{$item['login']}', '{$item['password']}', '{$item['name']}', '{$item['email']}', '{$item['name_id']}')
         ");
 
+        // получение разделов для выпадающего списка
+        $page['name_id'] = $database->get_all("
+        select * from name
+    ");
+
         header('Location: read.users.php?id='.$database->lastInsertID());
     }
 
