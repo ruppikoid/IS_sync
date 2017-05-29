@@ -18,12 +18,12 @@
     // если была обновлена запись -> обновить в таблице
     if (isset($_POST['update'])) {
         $database->query("
-            UPDATE users SET 
-            
-            login       ='{$_POST['login']}', 
-            password    ='{$_POST['password']}', 
-            name        ='{$_POST['name']}', 
-            email       ='{$_POST['email']}', 
+            UPDATE users SET
+
+            login       ='{$_POST['login']}',
+            password    ='{$_POST['password']}',
+            name        ='{$_POST['name']}',
+            email       ='{$_POST['email']}',
             name_id     ='{$_POST['name_id']}'
 
             WHERE id={$id}
@@ -41,16 +41,28 @@
             'name'         => $_POST['name'],
             'email'        => $_POST['email'],
             'name_id'      => $_POST['name_id']
-                     
+
         ];
 
-        $database->query("
-            INSERT INTO users (login, password, name, email, name_id) 
+        if ($database->query("
+            INSERT INTO users (login, password, name, email, name_id)
             VALUES ('{$item['login']}', '{$item['password']}', '{$item['name']}', '{$item['email']}', '{$item['name_id']}')
-        ");
+        ")) {
+          #mkdir
+        }
 
         header('Location: read.users.php?id='.$database->lastInsertID());
     }
+
+    // получение разделов для выпадающего списка
+    $page['name_id'] = $database->get_all("
+    select * from name
+");
+
+// получение разделов для выпадающего списка
+$page['sections'] = $database->get_all("
+   select * from name
+");
 
     // вызов функции рендера шаблона HTML-страницы
     renderPage('edit.users', $page);
