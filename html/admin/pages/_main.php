@@ -3,10 +3,10 @@
 <head>
     <!-- Кодировка страницы -->
     <meta charset="UTF-8">
-    
+
     <!-- Название сайта -->
     <title>Admin panel</title>
-    
+
     <!-- Подключение стилевого оформления CSS -->
     <link rel="stylesheet" href="assets/css/uikit.min.css">
 
@@ -16,11 +16,12 @@
     <script src="assets/js/uikit-icons.min.js"></script>
 </head>
 <body>
-<<<<<<< HEAD
-  
-=======
->>>>>>> parent of 5ef1d0e... version 0.7
-    
+
+    <?php if (!isset($_SESSION['auth']) && $_SERVER['REQUEST_URI'] != "/admin/user.php") : ?>
+       <h1 class="uk-text-danger uk-text-center uk-margin-large-top">Доступ запрещен!</h1>
+       <?php die() ?>
+     <?php endif ?>
+
     <!-- Подключение блока навигационного меню -->
     <?php include('widgets/menu.php') ?>
 

@@ -18,15 +18,11 @@
     // если была обновлена запись -> обновить в таблице
     if (isset($_POST['update'])) {
         $database->query("
-            UPDATE name SET 
-            
-            firstname       ='{$_POST['firstname']}', 
-            lastname        ='{$_POST['lastname']}', 
-<<<<<<< HEAD
-            phonenumber    ='{$_POST['phonenumber']}', 
-=======
-            phone_number    ='{$_POST['phone_number']}', 
->>>>>>> parent of 5ef1d0e... version 0.7
+            UPDATE name SET
+
+            firstname       ='{$_POST['firstname']}',
+            lastname        ='{$_POST['lastname']}',
+            phonenumber    ='{$_POST['phonenumber']}',
             city            ='{$_POST['city']}'
 
             WHERE id={$id}
@@ -41,23 +37,14 @@
         $item = [
             'firstname'        => $_POST['firstname'],
             'lastname'         => $_POST['lastname'],
-<<<<<<< HEAD
-            'phonenumber'     => $_POST['phonenumber'],
-=======
-            'phone_number'     => $_POST['phone_number'],
->>>>>>> parent of 5ef1d0e... version 0.7
+            'phonenumber'      => $_POST['phonenumber'],
             'city'             => $_POST['city']
-                     
+
         ];
 
         $database->query("
-<<<<<<< HEAD
-            INSERT INTO name (firstname, lastname, phonenumber, city) 
+            INSERT INTO name (firstname, lastname, phonenumber, city)
             VALUES ('{$item['firstname']}', '{$item['lastname']}', '{$item['phonenumber']}', '{$item['city']}')
-=======
-            INSERT INTO name (firstname, lastname, phone_number, city) 
-            VALUES ('{$item['firstname']}', '{$item['lastname']}', '{$item['phone_number']}', '{$item['city']}')
->>>>>>> parent of 5ef1d0e... version 0.7
         ");
 
         header('Location: edit.php?id='.$database->lastInsertID());

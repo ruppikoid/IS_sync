@@ -111,7 +111,7 @@ $opts = array(
 			'driver'        => 'LocalFileSystem',           // driver for accessing file system (REQUIRED)
 			'path'          => $_SERVER['DOCUMENT_ROOT'] . '/assets/uploads/'.$addpath.'/',                 // path to files (REQUIRED)
 			'URL'           => '/assets/uploads/', // URL to files (REQUIRED)
-			'uploadDeny'    => array('all'),                // All Mimetypes not allowed to upload
+			'uploadDeny'    => null,                // All Mimetypes not allowed to upload
 			'uploadAllow'   => array('image', 'text/plain'),// Mimetype `image` and `text/plain` allowed to upload
 			'uploadOrder'   => array('deny', 'allow'),      // allowed Mimetype `image` and `text/plain` only
 			'accessControl' => 'access'                     // disable and hide dot starting files (OPTIONAL)
@@ -122,4 +122,3 @@ $opts = array(
 // run elFinder
 $connector = new elFinderConnector(new elFinder($opts));
 $connector->run();
-

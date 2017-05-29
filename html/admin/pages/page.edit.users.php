@@ -12,41 +12,38 @@
             <legend class="uk-legend uk-text-center">Редактирование записи</legend>
 
             <div class="uk-margin">
-                <input type="text" class="uk-input" placeholder="Логин" 
+                <input type="text" class="uk-input" placeholder="Логин"
                 name="login" value="<?= $item['login'] ?>">
             </div>
 
             <div class="uk-margin">
-                <input type="text" class="uk-input" placeholder="Пароль" 
+                <input type="text" class="uk-input" placeholder="Пароль"
                 name="password" value="<?= $item['password'] ?>">
             </div>
 
             <div class="uk-margin">
-                <input type="text" class="uk-input" placeholder="ФИО" 
+                <input type="text" class="uk-input" placeholder="ФИО"
                 name="name" value="<?= $item['name'] ?>">
             </div>
 
             <div class="uk-margin">
-                <input type="text" class="uk-input" placeholder="Email" 
+                <input type="text" class="uk-input" placeholder="Email"
                 name="email" value="<?= $item['email'] ?>">
             </div>
 
             <div class="uk-margin">
-                <input type="text" class="uk-input" placeholder="Id из сотрудников" 
+                <input type="text" class="uk-input" placeholder="Id из сотрудников"
                 name="name_id" value="<?= $item['name_id'] ?>">
             </div>
 
-<<<<<<< HEAD
-          <!--   <div class="uk-margin">
+            <div class="uk-margin">
                 <select class="uk-select" name="name_id" placeholder="Раздел">
                 <?php foreach ($sections as $x) : ?>
                     <option value="<?= $x['id'] ?>"><?= $x['name'] ?></option>
                 <?php endforeach ?>
                 </select>
-            </div> -->
+            </div>
 
-=======
->>>>>>> parent of 5ef1d0e... version 0.7
             <div class="uk-margin uk-text-center">
                 <button class="uk-button uk-button-secondary" type="submit" name="update">Обновить</button>
             </div>
@@ -80,17 +77,14 @@
                 <input type="text" class="uk-input" placeholder="name_id" name="name_id">
             </div>
 
-<<<<<<< HEAD
-       <!--       <div class="uk-margin">
+             <div class="uk-margin">
                 <select class="uk-select" name="name_id" placeholder="Фамилия сотрудника">
                 <?php foreach ($sections as $x) : ?>
                     <option value="<?= $x['id'] ?>"><?= $x['lastname'] ?></option>
                 <?php endforeach ?>
                 </select>
-            </div>  -->
+            </div>
 
-=======
->>>>>>> parent of 5ef1d0e... version 0.7
             <div class="uk-margin uk-text-center">
                 <button class="uk-button uk-button-secondary" type="submit" name="create">Добавить</button>
             </div>

@@ -6,11 +6,7 @@
 	if (isset($_POST['submit']))
 	{
 		$login = trim($_POST['login']);
-<<<<<<< HEAD
 		$password = ($_POST['password']);
-=======
-		$password = md5($_POST['password']);
->>>>>>> parent of 5ef1d0e... version 0.7
 
 		if ($login && $password)
 		{
@@ -21,6 +17,12 @@
 			{
 
 				$row = mysqli_fetch_array($result);
+
+				$_SESSION['auth'] = [
+									 'id' => $user['id'],
+									 'login' => $user['login']
+							 ];
+
 				$_SESSION['auth_admin'] = "yes_auth";
 				$_SESSION['login'] = $row["login"];
 				$_SESSION['id'] = $row["id"];
@@ -35,11 +37,8 @@
 		}
 
 	}
- ?> 
-<<<<<<< HEAD
- 
-=======
->>>>>>> parent of 5ef1d0e... version 0.7
+ ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -80,10 +79,8 @@ if (isset($msgerror)) echo '<p id="form-error" align="center">'.$msgerror.'</p>'
 				  <input type="text" name="password" placeholder="Пароль"/>
 				</li>
 
-
 			    <p align="center" ><input type="submit" id="submit_form" name="submit" value="Вход"/></p>
-			    <p align="center" ><a href="index.php">Главная страница</a>
-			        <a href="reg.php">Не зарегистрированы?</a></p>
+			    <p align="center" ><a href="index.php">Главная страница</a></p>
 
 			</form>
 

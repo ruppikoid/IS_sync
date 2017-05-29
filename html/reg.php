@@ -1,27 +1,27 @@
 <?php
 
-include ('db.php');  
+include ('db.php');
 
 // код регистрации
 if (isset($_POST["register"]))
 {
     $error = array();
-    
-  if (!$_POST["login"])  $error[] = "Укажите логин!"; 
-  if (!$_POST["email"])  $error[] = "Укажите email!"; 
-  if (!$_POST["password"])  $error[] = "Укажите пароль!"; 
-  
+
+  if (!$_POST["login"])  $error[] = "Укажите логин!";
+  if (!$_POST["email"])  $error[] = "Укажите email!";
+  if (!$_POST["password"])  $error[] = "Укажите пароль!";
+
   if (count($error))
   {
-      $_SESSION['message'] = "<p id='form-error'>".implode('<br />',$error)."</p>"; 
+      $_SESSION['message'] = "<p id='form-error'>".implode('<br />',$error)."</p>";
   }else
   {
     $admin_login = $_POST["login"];
     $admin_email = $_POST["email"];
     $admin_pass = md5($_POST["password"]);
-  
+
         mysqli_query($link, "INSERT INTO users (login, password, email)
-			VALUES(						
+			VALUES(
       	   '".$admin_login."',
            '".$admin_pass."',
            '".$admin_email."'
@@ -30,12 +30,12 @@ if (isset($_POST["register"]))
       $id = mysqli_insert_id($link);
       $directory = 'home'.$id;
       $update = mysqli_query($link, "UPDATE users SET directory = '$directory' WHERE id = '$id'");
-      mkdir("assets/uploads/$directory", 0777);   
+      mkdir("assets/uploads/$directory", 0777); #realpath -> $_SERVER['DOCUMENT_ROOT']
 
-      $_SESSION['message'] = "<p>Вы зарегистрировались и создана папка $directory</p>"; 
+      $_SESSION['message'] = "<p>Вы зарегистрировались и создана папка $directory</p>";
   }
-}   
-?> 
+}
+?>
 
 <!DOCTYPE html>
 <html>
@@ -62,12 +62,12 @@ if (isset($msgerror)) echo '<p id="form-error" align="center">'.$msgerror.'</p>'
     echo $_SESSION['message'];
     unset($_SESSION['message']);
     }
-        
+
     if(isset($_SESSION['answer']))
     {
     echo $_SESSION['answer'];
     unset($_SESSION['answer']);
-    } 
+    }
 ?>
 
     <form name="form_reg" method="post">
@@ -80,14 +80,14 @@ if (isset($msgerror)) echo '<p id="form-error" align="center">'.$msgerror.'</p>'
         <li>
         <input type="text" name="email"  placeholder="Email"/>
         </li>
-          
+
         <li>
         <input type="text" name="password" placeholder="Пароль"/>
         </li>
 
 
-        <p align="center" ><input type="submit" id="submit_form" name="register" value="Регистрация"/></p> 
-        <p align="center" ><a href="index.php">Главная страница</a>    
+        <p align="center" ><input type="submit" id="submit_form" name="register" value="Регистрация"/></p>
+        <p align="center" ><a href="index.php">Главная страница</a>
         <a href="login.php">Страница входа!</a></p>
     </form>
 

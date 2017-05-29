@@ -23,7 +23,7 @@
 
             <div class="uk-margin">
                 <input type="text" class="uk-input" placeholder="Номер телефона" 
-                name="phone_number" value="<?= $item['phone_number'] ?>">
+                name="phonenumber" value="<?= $item['phonenumber'] ?>">
             </div>
 
             <div class="uk-margin">
@@ -52,7 +52,7 @@
             </div>
 
             <div class="uk-margin">
-                <input type="text" class="uk-input" placeholder="Номер телефона" name="phone_number">
+                <input type="text" class="uk-input" placeholder="Номер телефона" name="phonenumber">
             </div>
 
             <div class="uk-margin">

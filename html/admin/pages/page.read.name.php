@@ -8,7 +8,7 @@
 
     <div class="uk-card uk-card-default uk-card-body uk-margin">
         <h3 class="uk-card-title">ID <?= $item['id'] ?> - <?= $item['firstname'] ?> <?= $item['lastname'] ?></h3>
-        <p class="uk-text-meta uk-text-right">Номер телефона: <?= $item['phone_number'] ?></p>
+        <p class="uk-text-meta uk-text-right">Номер телефона: <?= $item['phonenumber'] ?></p>
 
         <hr class="uk-divider-icon">
 
