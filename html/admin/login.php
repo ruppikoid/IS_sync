@@ -1,21 +1,17 @@
 <?php
 	session_start();
 
-	include ('db.php');
+	include ('../db.php');
 
 	if (isset($_POST['submit']))
 	{
 		$login = trim($_POST['login']);
-<<<<<<< HEAD
-		$password = ($_POST['password']);
-=======
 		$password = md5($_POST['password']);
->>>>>>> parent of 5ef1d0e... version 0.7
 
 		if ($login && $password)
 		{
 
-			$result = mysqli_query($link, "SELECT * FROM users WHERE login = '$login' AND password = '$password'");
+			$result = mysqli_query($link, "SELECT * FROM admin WHERE login = '$login' AND password = '$password'");
 
 			if (mysqli_num_rows($result) > 0)
 			{
@@ -24,7 +20,7 @@
 				$_SESSION['auth_admin'] = "yes_auth";
 				$_SESSION['login'] = $row["login"];
 				$_SESSION['id'] = $row["id"];
-				header ("location: content.php");
+				header ("location: index.php");
 			} else
 			{
 				$msgerror = "Неверный логин или пароль";
@@ -35,25 +31,21 @@
 		}
 
 	}
- ?> 
-<<<<<<< HEAD
- 
-=======
->>>>>>> parent of 5ef1d0e... version 0.7
+ ?>
 <!DOCTYPE html>
 <html>
 <head>
 	<title>Вход</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="assets/css/uikit.css">
-	 <link rel="stylesheet" type="text/css" href="assets/css/login.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/login.css">
 	<link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.ico">
 </head>
 <body>
 	<div class="uk-vertical-align uk-text-center uk-height-1-1">
 		 <div class="uk-vertical-align-middle" style="width: 350px;">
 
-		 	<img class="uk-margin-bottom" width="140" height="120" src="assets/images/login.png" alt="">
+		 	<img class="uk-margin-bottom" width="140" height="120" src="../assets/images/logoadmin.png" alt="">
 
 <?php
 if (isset($msgerror)) echo '<p id="form-error" align="center">'.$msgerror.'</p>';
@@ -83,8 +75,6 @@ if (isset($msgerror)) echo '<p id="form-error" align="center">'.$msgerror.'</p>'
 
 			    <p align="center" ><input type="submit" id="submit_form" name="submit" value="Вход"/></p>
 			    <p align="center" ><a href="index.php">Главная страница</a>
-			        <a href="reg.php">Не зарегистрированы?</a></p>
-
 			</form>
 
 		</div>

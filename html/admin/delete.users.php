@@ -13,11 +13,6 @@
             'delete from users where id='.$id
         );
 
-        // получение разделов для выпадающего списка
-    $page['sections'] = $database->get_all("
-        select * from sections
-    ");
-
         // переадресация на главную страницу
         header("Location: read.users.php");
     }

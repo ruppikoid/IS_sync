@@ -36,6 +36,7 @@
                 name="name_id" value="<?= $item['name_id'] ?>">
             </div>
 
+<<<<<<< HEAD
           <!--   <div class="uk-margin">
                 <select class="uk-select" name="name_id" placeholder="Раздел">
                 <?php foreach ($sections as $x) : ?>
@@ -44,6 +45,8 @@
                 </select>
             </div> -->
 
+=======
+>>>>>>> parent of 5ef1d0e... version 0.7
             <div class="uk-margin uk-text-center">
                 <button class="uk-button uk-button-secondary" type="submit" name="update">Обновить</button>
             </div>
@@ -77,6 +80,7 @@
                 <input type="text" class="uk-input" placeholder="name_id" name="name_id">
             </div>
 
+<<<<<<< HEAD
        <!--       <div class="uk-margin">
                 <select class="uk-select" name="name_id" placeholder="Фамилия сотрудника">
                 <?php foreach ($sections as $x) : ?>
@@ -85,6 +89,8 @@
                 </select>
             </div>  -->
 
+=======
+>>>>>>> parent of 5ef1d0e... version 0.7
             <div class="uk-margin uk-text-center">
                 <button class="uk-button uk-button-secondary" type="submit" name="create">Добавить</button>
             </div>

@@ -16,7 +16,10 @@
     <script src="assets/js/uikit-icons.min.js"></script>
 </head>
 <body>
+<<<<<<< HEAD
   
+=======
+>>>>>>> parent of 5ef1d0e... version 0.7
     
     <!-- Подключение блока навигационного меню -->
     <?php include('widgets/menu.php') ?>

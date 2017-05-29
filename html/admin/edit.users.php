@@ -48,11 +48,14 @@
             INSERT INTO users (login, password, name, email, name_id) 
             VALUES ('{$item['login']}', '{$item['password']}', '{$item['name']}', '{$item['email']}', '{$item['name_id']}')
         ");
+<<<<<<< HEAD
 
         // получение разделов для выпадающего списка
         $page['name_id'] = $database->get_all("
         select * from name
     ");
+=======
+>>>>>>> parent of 5ef1d0e... version 0.7
 
         header('Location: read.users.php?id='.$database->lastInsertID());
     }
