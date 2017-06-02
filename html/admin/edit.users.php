@@ -59,14 +59,14 @@
         header('Location: read.users.php?id='.$database->lastInsertID());
     }
 
-    // // получение разделов для выпадающего списка
-    // $page['name_id'] = $database->get_all("
-    // select * from name
-    // ");
 
-    // получение разделов для выпадающего списка
-    $page['sections'] = $database->get_all("
+    // получение разделов для выпадающего списка личной информации
+    $page['name'] = $database->get_all("
     select * from name
+    ");
+    // получение разделов для выпадающего списка отделов
+    $page['departaments'] = $database->get_all("
+    select * from departaments
     ");
 
     // вызов функции рендера шаблона HTML-страницы

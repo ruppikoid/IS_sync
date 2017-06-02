@@ -12,17 +12,17 @@
             <legend class="uk-legend uk-text-center">Редактирование записи</legend>
 
             <div class="uk-margin">
-                <input type="text" class="uk-input" placeholder="Логин" 
+                <input type="text" class="uk-input" placeholder="Логин"
                 name="login" value="<?= $item['login'] ?>">
             </div>
 
             <div class="uk-margin">
-                <input type="text" class="uk-input" placeholder="Пароль" 
+                <input type="text" class="uk-input" placeholder="Пароль"
                 name="password" value="<?= $item['password'] ?>">
             </div>
 
             <!-- <div class="uk-margin">
-                <input type="text" class="uk-input" placeholder="Пароль" 
+                <input type="text" class="uk-input" placeholder="Пароль"
                 name="directory" value="<?= $item['directory'] ?>">
             </div> -->
 
