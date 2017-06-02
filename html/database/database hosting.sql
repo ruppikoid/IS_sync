@@ -37,7 +37,6 @@ CREATE TABLE IF NOT EXISTS `hosting`.`users` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `login` VARCHAR(60) NULL,
   `password` VARCHAR(32) NULL,
-  `name` VARCHAR(120) NULL,
   `email` VARCHAR(255) NULL,
   `directory` VARCHAR(255) NULL DEFAULT '/',
   `name_id` INT NOT NULL,

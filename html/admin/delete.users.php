@@ -14,9 +14,9 @@
         );
 
         // получение разделов для выпадающего списка
-    $page['sections'] = $database->get_all("
-        select * from sections
-    ");
+        $page['name_id'] = $database->get_all("
+            select * from name
+        ");
 
         // переадресация на главную страницу
         header("Location: read.users.php");

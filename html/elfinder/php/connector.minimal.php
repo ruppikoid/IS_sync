@@ -115,7 +115,52 @@ $opts = array(
 			'uploadAllow'   => array('image', 'text/plain'),// Mimetype `image` and `text/plain` allowed to upload
 			'uploadOrder'   => array('deny', 'allow'),      // allowed Mimetype `image` and `text/plain` only
 			'accessControl' => 'access'                     // disable and hide dot starting files (OPTIONAL)
+		),
+
+		array(
+			'driver'        => 'LocalFileSystem',           // driver for accessing file system (REQUIRED)
+			'path'          => $_SERVER['DOCUMENT_ROOT'] . '/assets/uploads/ИВЦ/'.$addpath.'/',                 // path to files (REQUIRED)
+			'URL'           => '/assets/uploads/ИВЦ/', // URL to files (REQUIRED)
+			'uploadDeny'    => null,                // All Mimetypes not allowed to upload
+			'uploadAllow'   => array('image', 'text/plain'),// Mimetype `image` and `text/plain` allowed to upload
+			'uploadOrder'   => array('deny', 'allow'),      // allowed Mimetype `image` and `text/plain` only
+			'accessControl' => 'access',                      // disable and hide dot starting files (OPTIONAL)
+			'alias' => 'ИВЦ'
+		),
+
+		array(
+			'driver'        => 'LocalFileSystem',           // driver for accessing file system (REQUIRED)
+			'path'          => $_SERVER['DOCUMENT_ROOT'] . '/assets/uploads/Отдел кадров/'.$addpath.'/',                 // path to files (REQUIRED)
+			'URL'           => '/assets/uploads/', // URL to files (REQUIRED)
+			'uploadDeny'    => null,                // All Mimetypes not allowed to upload
+			'uploadAllow'   => array('image', 'text/plain'),// Mimetype `image` and `text/plain` allowed to upload
+			'uploadOrder'   => array('deny', 'allow'),      // allowed Mimetype `image` and `text/plain` only
+			'accessControl' => 'access',                      // disable and hide dot starting files (OPTIONAL)
+			'alias' => 'Отдел кадров'
+		),
+
+		array(
+			'driver'        => 'LocalFileSystem',           // driver for accessing file system (REQUIRED)
+			'path'          => $_SERVER['DOCUMENT_ROOT'] . '/assets/uploads/Отдел продаж/'.$addpath.'/',                 // path to files (REQUIRED)
+			'URL'           => '/assets/uploads/', // URL to files (REQUIRED)
+			'uploadDeny'    => null,                // All Mimetypes not allowed to upload
+			'uploadAllow'   => array('image', 'text/plain'),// Mimetype `image` and `text/plain` allowed to upload
+			'uploadOrder'   => array('deny', 'allow'),      // allowed Mimetype `image` and `text/plain` only
+			'accessControl' => 'access',                      // disable and hide dot starting files (OPTIONAL)
+			'alias' => 'Отдел продаж'
+		),
+
+		array(
+			'driver'        => 'LocalFileSystem',           // driver for accessing file system (REQUIRED)
+			'path'          => $_SERVER['DOCUMENT_ROOT'] . '/assets/uploads/Служба безопасности/'.$addpath.'/',                 // path to files (REQUIRED)
+			'URL'           => '/assets/uploads/', // URL to files (REQUIRED)
+			'uploadDeny'    => null,                // All Mimetypes not allowed to upload
+			'uploadAllow'   => array('image', 'text/plain'),// Mimetype `image` and `text/plain` allowed to upload
+			'uploadOrder'   => array('deny', 'allow'),      // allowed Mimetype `image` and `text/plain` only
+			'accessControl' => 'access',                      // disable and hide dot starting files (OPTIONAL)
+			'alias' => 'Служба безопасности'
 		)
+
 	)
 );
 

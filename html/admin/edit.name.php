@@ -47,7 +47,7 @@
             VALUES ('{$item['firstname']}', '{$item['lastname']}', '{$item['phonenumber']}', '{$item['city']}')
         ");
 
-        header('Location: edit.php?id='.$database->lastInsertID());
+        header('Location: edit.php');
     }
 
     // вызов функции рендера шаблона HTML-страницы

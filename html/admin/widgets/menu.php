@@ -10,6 +10,7 @@
 
     </div>
  -->
+    <!-- Навигационная панель -->
      <div class="uk-navbar-center">
 
         <ul class="uk-navbar-nav">

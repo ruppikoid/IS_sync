@@ -22,24 +22,14 @@
             </div>
 
             <div class="uk-margin">
-                <input type="text" class="uk-input" placeholder="ФИО"
-                name="name" value="<?= $item['name'] ?>">
-            </div>
-
-            <div class="uk-margin">
                 <input type="text" class="uk-input" placeholder="Email"
                 name="email" value="<?= $item['email'] ?>">
             </div>
 
             <div class="uk-margin">
-                <input type="text" class="uk-input" placeholder="Id из сотрудников"
-                name="name_id" value="<?= $item['name_id'] ?>">
-            </div>
-
-            <div class="uk-margin">
                 <select class="uk-select" name="name_id" placeholder="Раздел">
                 <?php foreach ($sections as $x) : ?>
-                    <option value="<?= $x['id'] ?>"><?= $x['name'] ?></option>
+                    <option value="<?= $x['id'] ?>"><?= $x['lastname'] ?></option>
                 <?php endforeach ?>
                 </select>
             </div>
@@ -65,16 +55,7 @@
             </div>
 
             <div class="uk-margin">
-                <input type="text" class="uk-input" placeholder="ФИО" name="name">
-            </div>
-
-            <div class="uk-margin">
                 <input type="text" class="uk-input" placeholder="Email" name="email">
-            </div>
-
-
-              <div class="uk-margin">
-                <input type="text" class="uk-input" placeholder="name_id" name="name_id">
             </div>
 
              <div class="uk-margin">
