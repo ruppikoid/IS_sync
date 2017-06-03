@@ -7,7 +7,7 @@
     $page['title'] = 'Список существующих записей';
 
     // получение всех записей из таблицы
-    $page['name'] = $database->get_all(
+    $page['news'] = $database->get_all(
         'select * from admin'
 
     );
