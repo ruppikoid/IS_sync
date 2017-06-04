@@ -10,7 +10,7 @@
         <h3 class="uk-card-title">ID <?= $item['id'] ?> - <?= $item['login'] ?></h3>
         <p class="uk-text-meta">Пароль: <?= $item['password'] ?></p>
         <p class="uk-text-right">Почта: <?= $item['email'] ?></p>
-        <p class="uk-text-right">Отдел: <?= $item['name_departament'] ?></p>
+        <p class="uk-text-right">Отдел: <?= $item['departaments_id'] ?></p>
 
         <hr class="uk-divider-icon">
 
