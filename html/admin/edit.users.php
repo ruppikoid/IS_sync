@@ -6,7 +6,7 @@
     // пример переменной для рендера
     $page['title'] = 'Панель добавления/редактирования записей';
 
-    // получение выбранной новости, если передан $_GET['id']
+    // получение выбранной карточки, если передан $_GET['id']
     if (isset($_GET['id'])) {
         $id = trim($_GET['id']);
 
@@ -47,15 +47,15 @@
         if ($database->query("
             INSERT INTO users (login, password, email, name_id, departaments_id)
             VALUES ('{$item['login']}', '{$item['password']}', '{$item['email']}', '{$item['name_id']}', '{$item['departaments_id']}')
-        ")) 
-            // Создание директории пользователя
-    //     { 
-    //      $database->query (
-    //         $id = lastInsertID(),
-    //         $directory = 'home'.$id,
-    //         $update = $database->query($link, "UPDATE users SET directory = '$directory' WHERE id = '$id'"),
-    //        mkdir ($_SERVER['DOCUMENT_ROOT']."assets/uploads/$directory", 0777))
-    //      }
+        "))
+        // Создание директории пользователя
+        { 
+         $database->query (
+            $database->lastInsertID(),
+            $directory = 'home'.$database->lastInsertID(),
+            $update = $database->query("UPDATE users SET directory = '$directory' WHERE id = '$database'"),
+            mkdir ($_SERVER['DOCUMENT_ROOT']."/assets/uploads/'{$item['departaments_id']}'/$directory", 0777));
+        }
 
         header('Location: read.users.php?id='.$database->lastInsertID());
     }

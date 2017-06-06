@@ -4,7 +4,7 @@
     <?php if (isset($_SESSION['auth'])) : ?>
         
         <!-- личный кабинет -->
-        <h2 class="uk-margin-large">
+        <h2 class="uk-margin">
             Добро пожаловать, <?= $_SESSION['auth']['login'] ?>
         </h2>
         <div class="uk-margin">

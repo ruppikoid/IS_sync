@@ -44,5 +44,9 @@
     ?>
     </div>
 
+     <div class="uk-section uk-section-secondary">
+        <p class="uk-text-center">Дипломный проект 2017 год</p>
+    </div>
+
 </body>
 </html>

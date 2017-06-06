@@ -22,7 +22,7 @@
 			<div class="p">
 				<h1>Совместный доступ к файлам</h1>
 				<h3>Чтобы ваши знакомые могли без проблем скачать файлы, вы можете просто предоставить им доступ по ссылке!!!</h3>
-			</div>			
+			</div>
 		</div>
 
 		<div class="img_url">
@@ -34,7 +34,7 @@
 			<div class="load">
 				<h1>Загрузка файлов до 2 ГБ</h1>
 				<h3>Вы сможете загружать файлы объемом до 2 ГБ</h3>
-			</div>			
+			</div>
 		</div>
 
 		<div class="img_progress">
@@ -46,21 +46,15 @@
 			<div class="view">
 				<h1>Просмотр файлов в веб-интерфейсе</h1>
 				<h3>Присутсвует возможность просматривать текстовые документы прямо в веб-интерфейсе</h3>
-			</div>			
+			</div>
 		</div>
 
 		<div class="img_view">
 			<img  src="assets/images/el_view.png">
 		</div>
 
-		<div class="reg">
-			<div class="reg_text">
-				<h1>Попробуйте сами!!!</h1>
-				<div class="button_reg">
-					<a href="reg.php">Регистрация</a>
-				</div>		
-			</div>			
-		</div>		
-	</div>
+
+		<nav>
+		</nav>
 </body>
 </html>

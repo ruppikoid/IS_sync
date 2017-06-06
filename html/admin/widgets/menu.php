@@ -15,7 +15,6 @@
 
         <ul class="uk-navbar-nav">
           <?php if (isset($_SESSION['auth'])) : ?>
-                <li><a href="index.php">Главная</a></li>
                 <li><a href="read.php">Просмотр записей</a></li>
                 <li><a href="edit.php">Добавить запись</a></li>
             
