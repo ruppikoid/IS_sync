@@ -114,13 +114,25 @@ $opts = array(
 			'uploadDeny'    => null,                // All Mimetypes not allowed to upload
 			'uploadAllow'   => array('image', 'text/plain'),// Mimetype `image` and `text/plain` allowed to upload
 			'uploadOrder'   => array('deny', 'allow'),      // allowed Mimetype `image` and `text/plain` only
-			'accessControl' => 'access'                     // disable and hide dot starting files (OPTIONAL)
+			'accessControl' => 'access',                     // disable and hide dot starting files (OPTIONAL)
+			'alias' => 'Корень'
 		),
 
 		array(
 			'driver'        => 'LocalFileSystem',           // driver for accessing file system (REQUIRED)
-			'path'          => $_SERVER['DOCUMENT_ROOT'] . '/assets/uploads/ИВЦ/'.$addpath.'/',                 // path to files (REQUIRED)
-			'URL'           => '/assets/uploads/ИВЦ/', // URL to files (REQUIRED)
+			'path'          => $_SERVER['DOCUMENT_ROOT'] . '/assets/uploads/1/'.$addpath.'/',                 // path to files (REQUIRED)
+			'URL'           => '/assets/uploads/1/', // URL to files (REQUIRED)
+			'uploadDeny'    => null,                // All Mimetypes not allowed to upload
+			'uploadAllow'   => array('image', 'text/plain'),// Mimetype `image` and `text/plain` allowed to upload
+			'uploadOrder'   => array('deny', 'allow'),      // allowed Mimetype `image` and `text/plain` only
+			'accessControl' => 'access',                      // disable and hide dot starting files (OPTIONAL)
+			'alias' => 'Бухгалтерия'
+		),
+
+		array(
+			'driver'        => 'LocalFileSystem',           // driver for accessing file system (REQUIRED)
+			'path'          => $_SERVER['DOCUMENT_ROOT'] . '/assets/uploads/2/'.$addpath.'/',                 // path to files (REQUIRED)
+			'URL'           => '/assets/uploads/2/', // URL to files (REQUIRED)
 			'uploadDeny'    => null,                // All Mimetypes not allowed to upload
 			'uploadAllow'   => array('image', 'text/plain'),// Mimetype `image` and `text/plain` allowed to upload
 			'uploadOrder'   => array('deny', 'allow'),      // allowed Mimetype `image` and `text/plain` only
@@ -130,8 +142,8 @@ $opts = array(
 
 		array(
 			'driver'        => 'LocalFileSystem',           // driver for accessing file system (REQUIRED)
-			'path'          => $_SERVER['DOCUMENT_ROOT'] . '/assets/uploads/Отдел кадров/'.$addpath.'/',                 // path to files (REQUIRED)
-			'URL'           => '/assets/uploads/', // URL to files (REQUIRED)
+			'path'          => $_SERVER['DOCUMENT_ROOT'] . '/assets/uploads/3/'.$addpath.'/',                 // path to files (REQUIRED)
+			'URL'           => '/assets/uploads/3/', // URL to files (REQUIRED)
 			'uploadDeny'    => null,                // All Mimetypes not allowed to upload
 			'uploadAllow'   => array('image', 'text/plain'),// Mimetype `image` and `text/plain` allowed to upload
 			'uploadOrder'   => array('deny', 'allow'),      // allowed Mimetype `image` and `text/plain` only
@@ -141,8 +153,8 @@ $opts = array(
 
 		array(
 			'driver'        => 'LocalFileSystem',           // driver for accessing file system (REQUIRED)
-			'path'          => $_SERVER['DOCUMENT_ROOT'] . '/assets/uploads/Отдел продаж/'.$addpath.'/',                 // path to files (REQUIRED)
-			'URL'           => '/assets/uploads/', // URL to files (REQUIRED)
+			'path'          => $_SERVER['DOCUMENT_ROOT'] . '/assets/uploads/4/'.$addpath.'/',                 // path to files (REQUIRED)
+			'URL'           => '/assets/uploads/4/', // URL to files (REQUIRED)
 			'uploadDeny'    => null,                // All Mimetypes not allowed to upload
 			'uploadAllow'   => array('image', 'text/plain'),// Mimetype `image` and `text/plain` allowed to upload
 			'uploadOrder'   => array('deny', 'allow'),      // allowed Mimetype `image` and `text/plain` only
@@ -152,8 +164,8 @@ $opts = array(
 
 		array(
 			'driver'        => 'LocalFileSystem',           // driver for accessing file system (REQUIRED)
-			'path'          => $_SERVER['DOCUMENT_ROOT'] . '/assets/uploads/Служба безопасности/'.$addpath.'/',                 // path to files (REQUIRED)
-			'URL'           => '/assets/uploads/', // URL to files (REQUIRED)
+			'path'          => $_SERVER['DOCUMENT_ROOT'] . '/assets/uploads/5/'.$addpath.'/',                 // path to files (REQUIRED)
+			'URL'           => '/assets/uploads/5/', // URL to files (REQUIRED)
 			'uploadDeny'    => null,                // All Mimetypes not allowed to upload
 			'uploadAllow'   => array('image', 'text/plain'),// Mimetype `image` and `text/plain` allowed to upload
 			'uploadOrder'   => array('deny', 'allow'),      // allowed Mimetype `image` and `text/plain` only
