@@ -118,6 +118,17 @@ $opts = array(
 			'alias' => 'Корень'
 		),
 
+			array(
+				'driver'        => 'LocalFileSystem',           // driver for accessing file system (REQUIRED)
+				'path'          => $_SERVER['DOCUMENT_ROOT'] . '/assets/uploads/'.$addpath.'/',                 // path to files (REQUIRED)
+				'URL'           => '/assets/uploads/', // URL to files (REQUIRED)
+				'uploadDeny'    => null,                // All Mimetypes not allowed to upload
+				'uploadAllow'   => array('image', 'text/plain'),// Mimetype `image` and `text/plain` allowed to upload
+				'uploadOrder'   => array('deny', 'allow'),      // allowed Mimetype `image` and `text/plain` only
+				'accessControl' => 'access',                     // disable and hide dot starting files (OPTIONAL)
+				'alias' => 'afasfa'
+			),
+
 		array(
 			'driver'        => 'LocalFileSystem',           // driver for accessing file system (REQUIRED)
 			'path'          => $_SERVER['DOCUMENT_ROOT'] . '/assets/uploads/1/'.$addpath.'/',                 // path to files (REQUIRED)
@@ -132,7 +143,7 @@ $opts = array(
 		array(
 			'driver'        => 'LocalFileSystem',           // driver for accessing file system (REQUIRED)
 			'path'          => $_SERVER['DOCUMENT_ROOT'] . '/assets/uploads/2/'.$addpath.'/',                 // path to files (REQUIRED)
-			'URL'           => '/assets/uploads/2/', // URL to files (REQUIRED)
+			'URL'           => '/assets/uploads/2/'.$addpath, // URL to files (REQUIRED)
 			'uploadDeny'    => null,                // All Mimetypes not allowed to upload
 			'uploadAllow'   => array('image', 'text/plain'),// Mimetype `image` and `text/plain` allowed to upload
 			'uploadOrder'   => array('deny', 'allow'),      // allowed Mimetype `image` and `text/plain` only

@@ -44,20 +44,39 @@
 
         ];
 
-        if ($database->query("
-            INSERT INTO users (login, password, email, name_id, departaments_id)
-            VALUES ('{$item['login']}', '{$item['password']}', '{$item['email']}', '{$item['name_id']}', '{$item['departaments_id']}')
-        "))
+        // echo "<pre>";var_dump($item);echo "</pre>";
+
+        $insert_user = "
+          INSERT INTO users (login,password,email,name_id,departaments_id)
+          VALUES (
+            '{$item['login']}',
+            '{$item['password']}',
+            '{$item['email']}',
+            {$item['name_id']},
+            {$item['departaments_id']}
+            )
+        ";
+
+        echo $insert_user;
+
+        if ($database->query($insert_user))
         // Создание директории пользователя
-        { 
-         $database->query (
-            $database->lastInsertID(),
-            $directory = 'home'.$database->lastInsertID(),
-            $update = $database->query("UPDATE users SET directory = '$directory' WHERE id = '$database'"),
-            mkdir ($_SERVER['DOCUMENT_ROOT']."/assets/uploads/'{$item['departaments_id']}'/$directory", 0777));
+        {
+          $user_id = $database->lastInsertID();
+          $directory = 'home'.$user_id;
+
+          echo "<pre>";var_dump($directory);echo "</pre>";
+
+          if ($database->query("UPDATE users SET directory = '$directory' WHERE id = '$user_id'")) {
+            //mkdir
+            $folder = $_SERVER['DOCUMENT_ROOT']."/assets/uploads/{$item['departaments_id']}/$directory";
+            mkdir ($folder, 0777);
+          }
+
+          echo "<pre>";var_dump($folder);echo "</pre>";
         }
 
-        header('Location: read.users.php?id='.$database->lastInsertID());
+        // header('Location: read.users.php?id='.$user_id);
     }
 
 
