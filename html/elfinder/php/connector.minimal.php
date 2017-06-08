@@ -7,6 +7,7 @@ $id = $_SESSION["id"];
 $query = mysqli_query($link, "SELECT * FROM users WHERE id = '$id'");
 $newpath = mysqli_fetch_array($query);
 $addpath = $newpath["directory"];
+$dep_id = $newpath["departaments_id"];
 
 
 error_reporting(0); // Set E_ALL for debuging
@@ -118,21 +119,10 @@ $opts = array(
 			'alias' => 'Корень'
 		),
 
-			array(
-				'driver'        => 'LocalFileSystem',           // driver for accessing file system (REQUIRED)
-				'path'          => $_SERVER['DOCUMENT_ROOT'] . '/assets/uploads/'.$addpath.'/',                 // path to files (REQUIRED)
-				'URL'           => '/assets/uploads/', // URL to files (REQUIRED)
-				'uploadDeny'    => null,                // All Mimetypes not allowed to upload
-				'uploadAllow'   => array('image', 'text/plain'),// Mimetype `image` and `text/plain` allowed to upload
-				'uploadOrder'   => array('deny', 'allow'),      // allowed Mimetype `image` and `text/plain` only
-				'accessControl' => 'access',                     // disable and hide dot starting files (OPTIONAL)
-				'alias' => 'afasfa'
-			),
-
 		array(
 			'driver'        => 'LocalFileSystem',           // driver for accessing file system (REQUIRED)
 			'path'          => $_SERVER['DOCUMENT_ROOT'] . '/assets/uploads/1/'.$addpath.'/',                 // path to files (REQUIRED)
-			'URL'           => '/assets/uploads/1/', // URL to files (REQUIRED)
+			'URL'           => '/assets/uploads/1/'.$addpath, // URL to files (REQUIRED)
 			'uploadDeny'    => null,                // All Mimetypes not allowed to upload
 			'uploadAllow'   => array('image', 'text/plain'),// Mimetype `image` and `text/plain` allowed to upload
 			'uploadOrder'   => array('deny', 'allow'),      // allowed Mimetype `image` and `text/plain` only
@@ -154,7 +144,7 @@ $opts = array(
 		array(
 			'driver'        => 'LocalFileSystem',           // driver for accessing file system (REQUIRED)
 			'path'          => $_SERVER['DOCUMENT_ROOT'] . '/assets/uploads/3/'.$addpath.'/',                 // path to files (REQUIRED)
-			'URL'           => '/assets/uploads/3/', // URL to files (REQUIRED)
+			'URL'           => '/assets/uploads/3/'.$addpath, // URL to files (REQUIRED)
 			'uploadDeny'    => null,                // All Mimetypes not allowed to upload
 			'uploadAllow'   => array('image', 'text/plain'),// Mimetype `image` and `text/plain` allowed to upload
 			'uploadOrder'   => array('deny', 'allow'),      // allowed Mimetype `image` and `text/plain` only
@@ -165,7 +155,7 @@ $opts = array(
 		array(
 			'driver'        => 'LocalFileSystem',           // driver for accessing file system (REQUIRED)
 			'path'          => $_SERVER['DOCUMENT_ROOT'] . '/assets/uploads/4/'.$addpath.'/',                 // path to files (REQUIRED)
-			'URL'           => '/assets/uploads/4/', // URL to files (REQUIRED)
+			'URL'           => '/assets/uploads/4/'.$addpath, // URL to files (REQUIRED)
 			'uploadDeny'    => null,                // All Mimetypes not allowed to upload
 			'uploadAllow'   => array('image', 'text/plain'),// Mimetype `image` and `text/plain` allowed to upload
 			'uploadOrder'   => array('deny', 'allow'),      // allowed Mimetype `image` and `text/plain` only
@@ -176,12 +166,23 @@ $opts = array(
 		array(
 			'driver'        => 'LocalFileSystem',           // driver for accessing file system (REQUIRED)
 			'path'          => $_SERVER['DOCUMENT_ROOT'] . '/assets/uploads/5/'.$addpath.'/',                 // path to files (REQUIRED)
-			'URL'           => '/assets/uploads/5/', // URL to files (REQUIRED)
+			'URL'           => '/assets/uploads/5/'.$addpath, // URL to files (REQUIRED)
 			'uploadDeny'    => null,                // All Mimetypes not allowed to upload
 			'uploadAllow'   => array('image', 'text/plain'),// Mimetype `image` and `text/plain` allowed to upload
 			'uploadOrder'   => array('deny', 'allow'),      // allowed Mimetype `image` and `text/plain` only
 			'accessControl' => 'access',                      // disable and hide dot starting files (OPTIONAL)
 			'alias' => 'Служба безопасности'
+		),
+
+		array(
+			'driver'        => 'LocalFileSystem',           // driver for accessing file system (REQUIRED)
+			'path'          => $_SERVER['DOCUMENT_ROOT'] . '/assets/uploads/shared/' . $dep_id . '/',                 // path to files (REQUIRED)
+			'URL'           => '/assets/uploads/shared/'.$dep_id, // URL to files (REQUIRED)
+			'uploadDeny'    => null,                // All Mimetypes not allowed to upload
+			'uploadAllow'   => array('image', 'text/plain'),// Mimetype `image` and `text/plain` allowed to upload
+			'uploadOrder'   => array('deny', 'allow'),      // allowed Mimetype `image` and `text/plain` only
+			'accessControl' => 'access',                     // disable and hide dot starting files (OPTIONAL)
+			'alias' => 'Папка синхронизации всех отделов'
 		)
 
 	)

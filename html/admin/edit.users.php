@@ -57,7 +57,7 @@
             )
         ";
 
-        echo $insert_user;
+        // echo $insert_user;
 
         if ($database->query($insert_user))
         // Создание директории пользователя
@@ -65,18 +65,18 @@
           $user_id = $database->lastInsertID();
           $directory = 'home'.$user_id;
 
-          echo "<pre>";var_dump($directory);echo "</pre>";
+          // echo "<pre>";var_dump($directory);echo "</pre>";
 
           if ($database->query("UPDATE users SET directory = '$directory' WHERE id = '$user_id'")) {
-            //mkdir
+            //mkdir(create directory)
             $folder = $_SERVER['DOCUMENT_ROOT']."/assets/uploads/{$item['departaments_id']}/$directory";
             mkdir ($folder, 0777);
           }
 
-          echo "<pre>";var_dump($folder);echo "</pre>";
+          // echo "<pre>";var_dump($folder);echo "</pre>";
         }
 
-        // header('Location: read.users.php?id='.$user_id);
+        header('Location: read.users.php?id='.$user_id);
     }
 
 

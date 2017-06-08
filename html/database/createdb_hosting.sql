@@ -25,7 +25,7 @@ CREATE TABLE IF NOT EXISTS `hosting`.`name` (
   `firstname` VARCHAR(45) NULL,
   `lastname` VARCHAR(45) NULL,
   `phonenumber` VARCHAR(45) NULL,
-  `city` VARCHAR(45) NULL,
+  `city` VARCHAR(255) NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 
