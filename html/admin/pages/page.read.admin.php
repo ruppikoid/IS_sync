@@ -12,8 +12,6 @@
 
         <hr class="uk-divider-icon">
 
-        <p>Папка пользователя: <?= $item['directory'] ?></p>
-
         <div class="uk-margin uk-text-right">
             <a href="edit.admin.php?id=<?= $item['id'] ?>" class="uk-button uk-button-small uk-button-primary">Редактировать</a>
             <a href="delete.admin.php?id=<?= $item['id'] ?>" class="uk-button uk-button-small uk-button-danger">Удалить</a>
