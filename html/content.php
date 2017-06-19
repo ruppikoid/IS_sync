@@ -11,6 +11,10 @@
 	header('location: index.php');
 	}
  ?>
+<<<<<<< HEAD
+=======
+
+>>>>>>> master
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,10 +23,21 @@
 	<link rel="stylesheet" href="assets/css/uikit.css">
 	<link rel="stylesheet" href="assets/css/aboutus.css">
 	<link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.ico">
+<<<<<<< HEAD
 		<link rel="stylesheet" type="text/css" href="assets/scripts/jquery-ui.css">
 		<!-- elFinder CSS (REQUIRED) -->
 		<link rel="stylesheet" type="text/css" href="elfinder/css/elfinder.min.css">
 		<link rel="stylesheet" type="text/css" href="elfinder/css/theme.css">
+=======
+
+
+		<link rel="stylesheet" type="text/css" href="assets/scripts/jquery-ui.css">
+
+		<!-- elFinder CSS (REQUIRED) -->
+		<link rel="stylesheet" type="text/css" href="elfinder/css/elfinder.min.css">
+		<link rel="stylesheet" type="text/css" href="elfinder/css/theme.css">
+
+>>>>>>> master
 		<!-- Section JavaScript -->
 		<!-- jQuery and jQuery UI (REQUIRED) -->
 		<!--[if lt IE 9]>
@@ -32,12 +47,25 @@
 		<script src="/assets/scripts/jquery-3.1.1.min.js"></script>
 		<!--<![endif]-->
 		<script src="/assets/scripts/jquery-ui.min.js"></script>
+<<<<<<< HEAD
 		<!-- elFinder JS (REQUIRED) -->
 		<script src="elfinder/js/elfinder.min.js"></script>
 		<!-- GoogleDocs Quicklook plugin for GoogleDrive Volume (OPTIONAL) -->
 		<!--<script src="elfinder/js/extras/quicklook.googledocs.js"></script>-->
 		<!-- elFinder translation (OPTIONAL) -->
 		<script src="elfinder/js/i18n/elfinder.ru.js"></script>
+=======
+
+		<!-- elFinder JS (REQUIRED) -->
+		<script src="elfinder/js/elfinder.min.js"></script>
+
+		<!-- GoogleDocs Quicklook plugin for GoogleDrive Volume (OPTIONAL) -->
+		<!--<script src="elfinder/js/extras/quicklook.googledocs.js"></script>-->
+
+		<!-- elFinder translation (OPTIONAL) -->
+		<script src="elfinder/js/i18n/elfinder.ru.js"></script>
+
+>>>>>>> master
 		<!-- elFinder initialization (REQUIRED) -->
 		<script type="text/javascript" charset="utf-8">
 			// Documentation for client options:
@@ -50,6 +78,13 @@
 				});
 			});
 		</script>
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> master
 </head>
 <body>
 	<nav>
@@ -62,6 +97,10 @@
 		</div>
 	</nav>
 		<div id="elfinder">
+<<<<<<< HEAD
+=======
+
+>>>>>>> master
 		</div>
 </body>
 </html>
