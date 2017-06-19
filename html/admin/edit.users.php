@@ -23,8 +23,7 @@
             login                ='{$_POST['login']}',
             password             ='{$_POST['password']}',
             email                ='{$_POST['email']}',
-            name_id              ='{$_POST['name_id']}',
-            departaments_id      = {$_POST['departaments_id']}
+            name_id              ='{$_POST['name_id']}'
 
             WHERE id={$id}
         ");
@@ -37,7 +36,7 @@
 
         $item = [
             'login'                => $_POST['login'],
-            'password'             => $_POST['password'],
+            'password'             => ($_POST['password']),
             'email'                => $_POST['email'],
             'name_id'              => $_POST['name_id'],
             'departaments_id'      => $_POST['departaments_id']

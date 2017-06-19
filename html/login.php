@@ -76,7 +76,7 @@ if (isset($msgerror)) echo '<p id="form-error" align="center">'.$msgerror.'</p>'
 				</li>
 
 				<li>
-				  <input type="text" name="password" placeholder="Пароль"/>
+				  <input type="password" name="password" placeholder="Пароль"/>
 				</li>
 
 			    <p align="center" ><input type="submit" id="submit_form" name="submit" value="Вход"/></p>

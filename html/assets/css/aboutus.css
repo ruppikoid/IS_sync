@@ -3,7 +3,7 @@
 	margin: 0;
 }
 html, body {
-	width: 100%; height: 100%;	
+	width: 100%; height: 100%;
 	background-color: silver;
 }
 
@@ -18,13 +18,13 @@ nav {
 	width: 5%;
 	height: 5%;
 	color: white;
-	float: left; 
+	float: left;
 	margin-left: 40px;
 }
 
 .button {
 	float: right;
-	margin-right: 40px; 
+	margin-right: 40px;
 	margin-top: 25px;
 }
 
@@ -49,14 +49,14 @@ nav {
 .wrapper {
 	width: 100%;
 	height: 100%;
-}	
+}
 
 /*Описание про совместный доступ*/
 
 .url {
 	width: 100%;
 	height: 350px;
-	background-color: white; 
+	background-color: white;
 	float: left;
 }
 
@@ -75,7 +75,7 @@ nav {
 
 .p > h1 {
 	font-family: Segoe UI BLACK;
-	font-size: 3em;	
+	font-size: 3em;
 }
 
 .p > h3 {
@@ -86,7 +86,7 @@ nav {
 
 /*Изображение про доступ*/
 .img_url > img {
-	width: 100%; 
+	width: 100%;
 }
 
 /*Описание про загрузку файлов*/
@@ -103,7 +103,7 @@ nav {
 	width: 256px;
 	height: 256px;
 	margin: 50px;
-	margin-right: 150px; 
+	margin-right: 150px;
 	float: right;
 }
 
@@ -116,7 +116,7 @@ nav {
 
 .load > h1 {
 	font-family: Segoe UI BLACK;
-	font-size: 3em;	
+	font-size: 3em;
 }
 
 .load > h3 {
@@ -128,7 +128,7 @@ nav {
 /*Изображение про возможность загрузки файлов до 2 ГБ*/
 
  .img_progress > img {
-	width: 100%; 
+	width: 100%;
 }
 
 
@@ -137,7 +137,7 @@ nav {
 .file {
 	width: 100%;
 	height: 350px;
-	background-color: white; 
+	background-color: white;
 	float: left;
 }
 
@@ -157,7 +157,7 @@ nav {
 
 .view > h1 {
 	font-family: Segoe UI BLACK;
-	font-size: 3em;	
+	font-size: 3em;
 }
 
 .view > h3 {
@@ -168,34 +168,19 @@ nav {
 
 /*Изображение про просмотр файлов*/
  .img_view > img {
-	width: 100%; 
-}
-
-/*Кнопка регистрации*/
-
-.reg {
 	width: 100%;
-	height: 350px;
-	background-color: white; 
-	float: left;
 }
 
+/*Кнопка скачивания*/
 
-.reg_text > h1 {
-	font-family: Segoe UI BLACK;
-	font-size: 3em;	
-	text-align: center; 	
-	margin-top: 80px;
-}
-
-.button_reg {
+.button_uploads {
 	float: left;
-	margin-left: 45%; 
+	margin-left: 35%;
 	margin-top: 40px;
-	
+
 }
 
-.button_reg > a {
+.button_uploads > a {
 	text-decoration: none;
 	text-align: center;
 	font-size: 2em;
@@ -208,7 +193,7 @@ nav {
 	padding: 10px;
 }
 
-.button_reg > a:hover {
+.button_uploads > a:hover {
 	background-color: #2A8FFD;
 	transition: all .2s ease-in-out;
 }

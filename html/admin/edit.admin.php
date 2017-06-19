@@ -18,9 +18,9 @@
     // если была обновлена запись -> обновить в таблице
     if (isset($_POST['update'])) {
         $database->query("
-            UPDATE admin SET 
-            
-            login       ='{$_POST['login']}', 
+            UPDATE admin SET
+
+            login       ='{$_POST['login']}',
             password    ='{$_POST['password']}'
 
             WHERE id={$id}
@@ -34,12 +34,12 @@
 
         $item = [
             'login'        => $_POST['login'],
-            'password'     => $_POST['password']
-                     
+            'password'     => md5($_POST['password'])
+
         ];
 
         $database->query("
-            INSERT INTO admin (login, password) 
+            INSERT INTO admin (login, password)
             VALUES ('{$item['login']}', '{$item['password']}')
         ");
 

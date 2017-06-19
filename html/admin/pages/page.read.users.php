@@ -14,7 +14,8 @@
 
         <hr class="uk-divider-icon">
 
-        <p><?= $item['name_id'] ?></p>
+        <p class="uk-text-meta">ID сотрудника: <?= $item['name_id'] ?></p>
+          <p class="uk-text-meta">Личная папка: <?= $item['directory'] ?></p>
 
         <div class="uk-margin uk-text-right">
             <a href="edit.users.php?id=<?= $item['id'] ?>" class="uk-button uk-button-small uk-button-primary">Редактировать</a>

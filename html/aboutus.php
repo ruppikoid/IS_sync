@@ -55,6 +55,9 @@
 
 
 		<nav>
+			<div class="button_uploads">
+				<a href="#">Скачать версию для ПК</a>
+			</div>
 		</nav>
 </body>
 </html>

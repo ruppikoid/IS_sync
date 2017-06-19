@@ -10,10 +10,10 @@
     if (isset($_POST['signin'])) {
         // получаем данные из формы
         $login = $_POST['login'];
-        $password = ($_POST['password']);
+        $password = md5($_POST['password']);
         // получение пользователя с указанным логином
         $user = $database->get_one("
-            select * from admin 
+            select * from admin
             where login='{$login}'
         ");
         // если пользователь найден

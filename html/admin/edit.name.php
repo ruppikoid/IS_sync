@@ -22,7 +22,7 @@
 
             firstname       ='{$_POST['firstname']}',
             lastname        ='{$_POST['lastname']}',
-            phonenumber    ='{$_POST['phonenumber']}',
+            phonenumber     ='{$_POST['phonenumber']}',
             city            ='{$_POST['city']}'
 
             WHERE id={$id}

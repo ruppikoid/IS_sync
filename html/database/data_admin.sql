@@ -1,1 +1,1 @@
-INSERT INTO admin (login, password) VALUES ('admin', '123123#');
+INSERT INTO admin (login, password) VALUES ('admin', md5('123123#'));

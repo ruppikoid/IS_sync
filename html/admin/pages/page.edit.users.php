@@ -35,13 +35,6 @@
                 </select>
             </div>
 
-            <!-- <div class="uk-margin">
-                <select class="uk-select" name="departaments_id" placeholder="Отдел">
-                <?php foreach ($departaments as $x) : ?>
-                    <option value="<?= $x['id'] ?>"><?= $x['name'] ?></option>
-                <?php endforeach ?>
-                </select>
-            </div> -->
 
             <div class="uk-margin uk-text-center">
                 <button class="uk-button uk-button-secondary" type="submit" name="update">Обновить</button>
